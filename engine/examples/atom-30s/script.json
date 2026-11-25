@@ -1,0 +1,12 @@
+{ "voice": "am_michael", "speed": 1.05, "lead": 0.2, "gap": 0.24, "tail": 0.7,
+  "lines": [
+    {"text": "How far would you zoom into your fingertip to see one atom?", "gap": 0.35},
+    {"text": "Ten times closer, and the ridges of your fingerprint become hills."},
+    {"text": "A thousand times, and you hit your skin cells."},
+    {"text": "Ten thousand, and one cell's nucleus fills the screen."},
+    {"text": "A million times, and there's your DNA, coiled and twisting.", "gap": 0.3},
+    {"text": "But keep going.", "gap": 0.15},
+    {"text": "At a hundred million times closer,", "gap": 0.12},
+    {"text": "you finally reach a single atom.", "gap": 0.4},
+    {"text": "And your fingertip holds more atoms than there are stars in our galaxy."}
+  ] }

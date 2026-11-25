@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'Geo';src:url(fonts/Inter-Bold.otf);font-weight:700;font-display:block}
+@font-face{font-family:'Geo';src:url(fonts/Inter-SemiBold.otf);font-weight:600;font-display:block}
+html,body{margin:0;background:#1D2052;overflow:hidden}canvas{display:block}</style></head>
+<body><canvas id="c"></canvas><script type="module">
+import * as K from './scale.js'; import { scene } from './scene.js';
+const T = await (await fetch('timing.json')).json();
+const q = new URLSearchParams(location.search);
+K.setup(); const S = scene(K, T);
+let render = S.render;
+if (q.has('thumb')) {            // ?thumb=<t>&l1=..&l2=..&teaser=..  -> one frame with the thumbnail overlay
+  const tt = +q.get('thumb'), lines = [q.get('l1'), q.get('l2')].filter(Boolean);
+  render = () => { window.NO_SUBS = true; S.render(tt); K.thumbOverlay(lines, q.get('teaser')); };
+}
+await K.boot(render, T, S.ev);
+</script></body></html>

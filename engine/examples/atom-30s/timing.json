@@ -1,0 +1,368 @@
+{
+ "dur": 28.021,
+ "lines": [
+  {
+   "t0": 0.2,
+   "t1": 3.5,
+   "text": "How far would you zoom into your fingertip to see one atom?"
+  },
+  {
+   "t0": 3.85,
+   "t1": 7.839,
+   "text": "Ten times closer, and the ridges of your fingerprint become hills."
+  },
+  {
+   "t0": 8.079,
+   "t1": 10.756,
+   "text": "A thousand times, and you hit your skin cells."
+  },
+  {
+   "t0": 10.996,
+   "t1": 14.102,
+   "text": "Ten thousand, and one cell's nucleus fills the screen."
+  },
+  {
+   "t0": 14.342,
+   "t1": 17.69,
+   "text": "A million times, and there's your DNA, coiled and twisting."
+  },
+  {
+   "t0": 17.99,
+   "t1": 18.928,
+   "text": "But keep going."
+  },
+  {
+   "t0": 19.078,
+   "t1": 21.026,
+   "text": "At a hundred million times closer,"
+  },
+  {
+   "t0": 21.146,
+   "t1": 23.04,
+   "text": "you finally reach a single atom."
+  },
+  {
+   "t0": 23.44,
+   "t1": 27.321,
+   "text": "And your fingertip holds more atoms than there are stars in our galaxy."
+  }
+ ],
+ "words": [
+  {
+   "w": "How",
+   "t": 0.22
+  },
+  {
+   "w": "far",
+   "t": 0.412
+  },
+  {
+   "w": "would",
+   "t": 0.605
+  },
+  {
+   "w": "you",
+   "t": 0.831
+  },
+  {
+   "w": "zoom",
+   "t": 1.023
+  },
+  {
+   "w": "into",
+   "t": 1.232
+  },
+  {
+   "w": "your",
+   "t": 1.583
+  },
+  {
+   "w": "fingertip",
+   "t": 1.792
+  },
+  {
+   "w": "to",
+   "t": 2.369
+  },
+  {
+   "w": "see",
+   "t": 2.544
+  },
+  {
+   "w": "one",
+   "t": 2.736
+  },
+  {
+   "w": "atom?",
+   "t": 3.07
+  },
+  {
+   "w": "Ten",
+   "t": 3.87
+  },
+  {
+   "w": "times",
+   "t": 4.086
+  },
+  {
+   "w": "closer,",
+   "t": 4.499
+  },
+  {
+   "w": "and",
+   "t": 5.027
+  },
+  {
+   "w": "the",
+   "t": 5.243
+  },
+  {
+   "w": "ridges",
+   "t": 5.459
+  },
+  {
+   "w": "of",
+   "t": 5.891
+  },
+  {
+   "w": "your",
+   "t": 6.088
+  },
+  {
+   "w": "fingerprint",
+   "t": 6.323
+  },
+  {
+   "w": "become",
+   "t": 7.009
+  },
+  {
+   "w": "hills.",
+   "t": 7.6
+  },
+  {
+   "w": "A",
+   "t": 8.099
+  },
+  {
+   "w": "thousand",
+   "t": 8.287
+  },
+  {
+   "w": "times,",
+   "t": 8.785
+  },
+  {
+   "w": "and",
+   "t": 9.323
+  },
+  {
+   "w": "you",
+   "t": 9.552
+  },
+  {
+   "w": "hit",
+   "t": 9.781
+  },
+  {
+   "w": "your",
+   "t": 10.009
+  },
+  {
+   "w": "skin",
+   "t": 10.258
+  },
+  {
+   "w": "cells.",
+   "t": 10.507
+  },
+  {
+   "w": "Ten",
+   "t": 11.016
+  },
+  {
+   "w": "thousand,",
+   "t": 11.254
+  },
+  {
+   "w": "and",
+   "t": 11.878
+  },
+  {
+   "w": "one",
+   "t": 12.116
+  },
+  {
+   "w": "cell's",
+   "t": 12.529
+  },
+  {
+   "w": "nucleus",
+   "t": 12.81
+  },
+  {
+   "w": "fills",
+   "t": 13.307
+  },
+  {
+   "w": "the",
+   "t": 13.588
+  },
+  {
+   "w": "screen.",
+   "t": 13.826
+  },
+  {
+   "w": "A",
+   "t": 14.362
+  },
+  {
+   "w": "million",
+   "t": 14.539
+  },
+  {
+   "w": "times,",
+   "t": 14.989
+  },
+  {
+   "w": "and",
+   "t": 15.495
+  },
+  {
+   "w": "there's",
+   "t": 15.711
+  },
+  {
+   "w": "your",
+   "t": 16.141
+  },
+  {
+   "w": "DNA,",
+   "t": 16.375
+  },
+  {
+   "w": "coiled",
+   "t": 16.686
+  },
+  {
+   "w": "and",
+   "t": 17.116
+  },
+  {
+   "w": "twisting.",
+   "t": 17.331
+  },
+  {
+   "w": "But",
+   "t": 18.01
+  },
+  {
+   "w": "keep",
+   "t": 18.267
+  },
+  {
+   "w": "going.",
+   "t": 18.546
+  },
+  {
+   "w": "At",
+   "t": 19.098
+  },
+  {
+   "w": "a",
+   "t": 19.27
+  },
+  {
+   "w": "hundred",
+   "t": 19.425
+  },
+  {
+   "w": "million",
+   "t": 19.817
+  },
+  {
+   "w": "times",
+   "t": 20.21
+  },
+  {
+   "w": "closer,",
+   "t": 20.57
+  },
+  {
+   "w": "you",
+   "t": 21.166
+  },
+  {
+   "w": "finally",
+   "t": 21.352
+  },
+  {
+   "w": "reach",
+   "t": 21.877
+  },
+  {
+   "w": "a",
+   "t": 22.096
+  },
+  {
+   "w": "single",
+   "t": 22.249
+  },
+  {
+   "w": "atom.",
+   "t": 22.621
+  },
+  {
+   "w": "And",
+   "t": 23.46
+  },
+  {
+   "w": "your",
+   "t": 23.644
+  },
+  {
+   "w": "fingertip",
+   "t": 23.844
+  },
+  {
+   "w": "holds",
+   "t": 24.396
+  },
+  {
+   "w": "more",
+   "t": 24.612
+  },
+  {
+   "w": "atoms",
+   "t": 24.948
+  },
+  {
+   "w": "than",
+   "t": 25.299
+  },
+  {
+   "w": "there",
+   "t": 25.499
+  },
+  {
+   "w": "are",
+   "t": 25.851
+  },
+  {
+   "w": "stars",
+   "t": 26.17
+  },
+  {
+   "w": "in",
+   "t": 26.386
+  },
+  {
+   "w": "our",
+   "t": 26.554
+  },
+  {
+   "w": "galaxy.",
+   "t": 26.738
+  }
+ ]
+}

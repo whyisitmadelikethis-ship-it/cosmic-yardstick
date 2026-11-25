@@ -1,0 +1,4 @@
+node_modules/
+work/
+*.part
+__pycache__/

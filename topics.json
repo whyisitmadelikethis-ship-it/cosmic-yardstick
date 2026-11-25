@@ -1,0 +1,815 @@
+[
+ {
+  "n": 1,
+  "topic": "How small is an atom?",
+  "hook": "Look at your fingertip. Now zoom in a hundred million times.",
+  "payoff": "Only at ×100 million do you reach a single atom.",
+  "numbers": "fingertip 1.6 cm; skin cell 30 µm; DNA 2.5 nm wide; atom ~0.3 nm",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Atom",
+   "https://en.wikipedia.org/wiki/Orders_of_magnitude_(length)"
+  ],
+  "status": "planned",
+  "note": "10 s test sample exists; make the full 30 s version"
+ },
+ {
+  "n": 2,
+  "topic": "How far away is the Moon, really?",
+  "hook": "The Moon looks close… but it isn't.",
+  "payoff": "Every other planet lined up almost exactly fills the gap.",
+  "numbers": "Earth–Moon avg 384,400 km; 7 planets' diameters sum ≈380,000 km",
+  "scene": "stack-gap",
+  "sources": [
+   "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+   "https://en.wikipedia.org/wiki/Lunar_distance"
+  ],
+  "status": "planned",
+  "note": "10 s test sample exists; make the full 30 s version"
+ },
+ {
+  "n": 3,
+  "topic": "How long is your DNA unwound?",
+  "hook": "Your DNA is coiled inside a nucleus 0.006 mm wide.",
+  "payoff": "Stretched out, one cell's DNA is about 2 m — taller than you.",
+  "numbers": "~2 m per cell; nucleus ~6 µm",
+  "scene": "zoom-out",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Human_genome"
+  ],
+  "status": "planned",
+  "note": "10 s test sample exists; make the full 30 s version"
+ },
+ {
+  "n": 4,
+  "topic": "How big is the biggest star?",
+  "hook": "This is our Sun. Now meet UY Scuti.",
+  "payoff": "Put it in the Sun's place and it swallows Mercury, Venus, Earth and Mars.",
+  "numbers": "UY Scuti ~909 solar radii ≈ 4.2 AU",
+  "scene": "grow-swallow",
+  "sources": [
+   "https://en.wikipedia.org/wiki/UY_Scuti"
+  ],
+  "status": "planned",
+  "note": "10 s test sample exists; make the full 30 s version"
+ },
+ {
+  "n": 5,
+  "topic": "What if Earth stopped spinning?",
+  "hook": "The ground under you moves at 1,670 km/h.",
+  "payoff": "If Earth stopped, the air wouldn't — winds faster than a jet.",
+  "numbers": "equator 1,670 km/h; airliner ~900 km/h",
+  "scene": "speed-bars",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Earth%27s_rotation"
+  ],
+  "status": "planned",
+  "note": "10 s test sample exists; make the full 30 s version"
+ },
+ {
+  "n": 6,
+  "topic": "If the Sun were a basketball, where would Earth be?",
+  "hook": "Shrink the Sun to a basketball.",
+  "payoff": "Earth is a 2 mm pinhead 26 m away — a whole court.",
+  "numbers": "Sun 24 cm → Earth 2.2 mm at 26 m",
+  "scene": "analogy-scale",
+  "sources": [
+   "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+  ],
+  "status": "planned",
+  "note": "10 s test sample exists; make the full 30 s version"
+ },
+ {
+  "n": 7,
+  "topic": "How many Earths fit inside the Sun?",
+  "hook": "Fill the Sun with Earths. How many?",
+  "payoff": "About 1.3 million.",
+  "numbers": "Sun volume ≈1.3 million Earths; 109 Earths across",
+  "scene": "fill-count",
+  "sources": [
+   "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 8,
+  "topic": "How big is Jupiter compared to Earth?",
+  "hook": "Earth feels huge. Put it next to Jupiter.",
+  "payoff": "11 Earths fit across Jupiter, about 1,300 inside it.",
+  "numbers": "Jupiter 139,820 km vs Earth 12,742 km; volume ≈1,321×",
+  "scene": "side-by-side",
+  "sources": [
+   "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 9,
+  "topic": "How old is the sunlight you see?",
+  "hook": "The sunlight on your face isn't new.",
+  "payoff": "It left the Sun 8 minutes 20 seconds ago.",
+  "numbers": "1 AU = 149.6 million km; light 299,792 km/s → 499 s",
+  "scene": "speed-bars",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Astronomical_unit"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 10,
+  "topic": "If the Sun were a basketball, where is the nearest star?",
+  "hook": "Our Sun is a basketball. Where is the next one?",
+  "payoff": "About 7,000 km away — another continent.",
+  "numbers": "Proxima Centauri 4.24 ly; scale 1:5.8 billion",
+  "scene": "analogy-scale",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Proxima_Centauri"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 11,
+  "topic": "How thin is Earth's atmosphere?",
+  "hook": "All the air you'll ever breathe is in one thin layer.",
+  "payoff": "On a 20 cm globe it would be thinner than 2 mm.",
+  "numbers": "Kármán line 100 km vs Earth 12,742 km",
+  "scene": "zoom-out",
+  "sources": [
+   "https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_line"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 12,
+  "topic": "How deep is the deepest ocean?",
+  "hook": "Drop Mount Everest into the Mariana Trench.",
+  "payoff": "Its peak would still be about 2 km underwater.",
+  "numbers": "Challenger Deep ~10,935 m; Everest 8,849 m",
+  "scene": "stack-gap",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Challenger_Deep",
+   "https://en.wikipedia.org/wiki/Mount_Everest"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 13,
+  "topic": "How deep have humans ever dug?",
+  "hook": "The deepest hole ever drilled is over 12 km deep.",
+  "payoff": "That's only 0.2% of the way to Earth's centre.",
+  "numbers": "Kola Superdeep 12,262 m; Earth radius 6,371 km",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kola_Superdeep_Borehole"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 14,
+  "topic": "How many cells are in your body?",
+  "hook": "You are not one thing. You're a crowd.",
+  "payoff": "About 30 trillion human cells — 3,750× the people on Earth.",
+  "numbers": "~30 trillion cells (Sender et al. 2016); ~8 billion people",
+  "scene": "fill-count",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Cell_(biology)"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 15,
+  "topic": "How small is a virus?",
+  "hook": "A grain of sand looks tiny. Zoom into it.",
+  "payoff": "A typical virus is ~100 nm — 10,000 fit across a sand grain.",
+  "numbers": "sand ~1 mm; bacterium ~1-2 µm; virus ~100 nm",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Virus"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 16,
+  "topic": "How tall is Olympus Mons?",
+  "hook": "The tallest mountain isn't on Earth.",
+  "payoff": "Olympus Mons on Mars is about 2.5 Everests tall.",
+  "numbers": "~21.9 km high, ~600 km wide",
+  "scene": "side-by-side",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Olympus_Mons"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 17,
+  "topic": "How high is the space station, really?",
+  "hook": "The space station feels far away.",
+  "payoff": "If Earth were a basketball, the ISS would fly 7 mm above it.",
+  "numbers": "ISS ~400 km; Earth 12,742 km",
+  "scene": "analogy-scale",
+  "sources": [
+   "https://en.wikipedia.org/wiki/International_Space_Station"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 18,
+  "topic": "How fast does the space station go?",
+  "hook": "The ISS is moving at 28,000 km/h right now.",
+  "payoff": "Astronauts see about 16 sunrises every day.",
+  "numbers": "~28,000 km/h; orbit ~92 min",
+  "scene": "speed-bars",
+  "sources": [
+   "https://en.wikipedia.org/wiki/International_Space_Station"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 19,
+  "topic": "How thin are Saturn's rings?",
+  "hook": "Saturn's rings are wider than 20 Earths.",
+  "payoff": "But they're often only about 10 m thick.",
+  "numbers": "main rings ~280,000 km wide; ~10 m to 1 km thick",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rings_of_Saturn"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 20,
+  "topic": "How big is the Milky Way?",
+  "hook": "Shrink the whole Solar System to the size of a coin.",
+  "payoff": "The Milky Way would still be ~2,500 km wide.",
+  "numbers": "MW ~100,000 ly; Neptune orbit ~60 AU across",
+  "scene": "analogy-scale",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Milky_Way"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 21,
+  "topic": "How fast is Earth moving around the Sun?",
+  "hook": "You're sitting still… or are you?",
+  "payoff": "Earth carries you at about 107,000 km/h.",
+  "numbers": "29.8 km/s orbital speed",
+  "scene": "speed-bars",
+  "sources": [
+   "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 22,
+  "topic": "How fast is light?",
+  "hook": "Light could circle Earth in a blink.",
+  "payoff": "7.5 times around Earth every second.",
+  "numbers": "299,792 km/s; equator 40,075 km",
+  "scene": "speed-bars",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Speed_of_light"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 23,
+  "topic": "How far does light go in a nanosecond?",
+  "hook": "Light is the fastest thing there is.",
+  "payoff": "In one nanosecond it travels about 30 cm — a ruler.",
+  "numbers": "c × 1 ns = 29.98 cm",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Speed_of_light"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 24,
+  "topic": "How heavy is a neutron star?",
+  "hook": "This star is only about 20 km wide.",
+  "payoff": "A teaspoon of it would weigh about a billion tonnes.",
+  "numbers": "~20 km diameter; ~1.4 solar masses",
+  "scene": "side-by-side",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Neutron_star"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 25,
+  "topic": "How small would Earth be as a black hole?",
+  "hook": "Crush the whole Earth into a black hole.",
+  "payoff": "It would be under 2 cm wide — a marble.",
+  "numbers": "Schwarzschild radius of Earth ≈ 8.9 mm",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Schwarzschild_radius"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 26,
+  "topic": "How small would the Sun be as a black hole?",
+  "hook": "Squeeze the Sun until it becomes a black hole.",
+  "payoff": "It would be only about 6 km wide — a small town.",
+  "numbers": "Sun's Schwarzschild radius ≈ 2.95 km",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Schwarzschild_radius"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 27,
+  "topic": "How big is Pluto, really?",
+  "hook": "Pluto was once called a planet.",
+  "payoff": "It's smaller than our Moon — narrower than the USA.",
+  "numbers": "Pluto 2,377 km; Moon 3,474 km; USA ~4,500 km",
+  "scene": "side-by-side",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pluto"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 28,
+  "topic": "How big is the Moon, really?",
+  "hook": "Put the Moon down on Earth's map.",
+  "payoff": "It's almost as wide as Australia.",
+  "numbers": "Moon 3,474 km; Australia ~4,000 km east–west",
+  "scene": "side-by-side",
+  "sources": [
+   "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 29,
+  "topic": "How long is a light-year?",
+  "hook": "A light-year sounds like time. It's a distance.",
+  "payoff": "About 9.46 trillion km.",
+  "numbers": "9.461e12 km",
+  "scene": "zoom-out",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Light-year"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 30,
+  "topic": "How far can you see to the horizon?",
+  "hook": "Stand on a beach and look out to sea.",
+  "payoff": "The horizon is only about 5 km away.",
+  "numbers": "eye height 1.7 m → ~4.7 km",
+  "scene": "zoom-out",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Horizon"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 31,
+  "topic": "How big is a blue whale?",
+  "hook": "The biggest animal that ever lived is alive today.",
+  "payoff": "A blue whale is about as long as a basketball court.",
+  "numbers": "up to ~30 m; court 28.65 m",
+  "scene": "side-by-side",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Blue_whale"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 32,
+  "topic": "How tall is the tallest tree?",
+  "hook": "The tallest living tree is hidden in California.",
+  "payoff": "Hyperion is 116 m — taller than the Statue of Liberty.",
+  "numbers": "Hyperion ~116 m; Statue of Liberty 93 m incl. pedestal",
+  "scene": "side-by-side",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hyperion_(tree)"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 33,
+  "topic": "How big is the inside of an atom?",
+  "hook": "Atoms feel solid. They're mostly empty.",
+  "payoff": "If the nucleus were a blueberry, the atom would be ~600 m wide.",
+  "numbers": "hydrogen: atom ~1e-10 m vs proton ~1.7e-15 m (~60,000×)",
+  "scene": "zoom-out",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Atomic_nucleus"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 34,
+  "topic": "How thick is a human hair?",
+  "hook": "A hair looks thin. Zoom in.",
+  "payoff": "About 0.07 mm — just 9 red blood cells side by side.",
+  "numbers": "hair ~70 µm; red blood cell ~7.5 µm",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hair"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 35,
+  "topic": "How many Earths fit between Earth and the Sun?",
+  "hook": "Line up Earths between us and the Sun.",
+  "payoff": "You'd need about 11,700 of them.",
+  "numbers": "149.6 million km / 12,742 km",
+  "scene": "stack-gap",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Astronomical_unit"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 36,
+  "topic": "How many Earths fit across the Sun?",
+  "hook": "Line up Earths across the Sun's face.",
+  "payoff": "109 of them, edge to edge.",
+  "numbers": "Sun 1,392,700 km / Earth 12,742 km",
+  "scene": "stack-gap",
+  "sources": [
+   "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 37,
+  "topic": "How big was the dinosaur-killing asteroid?",
+  "hook": "It was about 10 km wide.",
+  "payoff": "Set down on Earth, it would stand taller than Everest.",
+  "numbers": "Chicxulub impactor ~10 km; Everest 8.8 km",
+  "scene": "side-by-side",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Chicxulub_impactor"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 38,
+  "topic": "How far away is Voyager 1?",
+  "hook": "Voyager 1 launched in 1977 and never stopped.",
+  "payoff": "It's so far that its signal takes about a day to reach us.",
+  "numbers": "~25 billion km; light ~23 h (check current value)",
+  "scene": "zoom-out",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Voyager_1"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 39,
+  "topic": "How big is the biggest black hole?",
+  "hook": "This black hole weighs 66 billion Suns.",
+  "payoff": "It could fit dozens of Solar Systems inside it.",
+  "numbers": "TON 618 ~66e9 M☉; radius ~1,300 AU vs Neptune 30 AU",
+  "scene": "grow-swallow",
+  "sources": [
+   "https://en.wikipedia.org/wiki/TON_618"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 40,
+  "topic": "How high do planes fly?",
+  "hook": "Planes cruise about 11 km up.",
+  "payoff": "That's the same as the depth of the deepest ocean.",
+  "numbers": "cruise ~10–12 km; Challenger Deep ~10.9 km",
+  "scene": "stack-gap",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Cruise_(aeronautics)"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 41,
+  "topic": "How big is the Pacific Ocean?",
+  "hook": "Take every continent on Earth.",
+  "payoff": "They'd all fit inside the Pacific — with room to spare.",
+  "numbers": "Pacific ~165 million km²; land ~149 million km²",
+  "scene": "fill-count",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pacific_Ocean"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 42,
+  "topic": "How much water is on Earth?",
+  "hook": "Earth looks like a water planet.",
+  "payoff": "All its water would make a ball only ~1,400 km wide.",
+  "numbers": "USGS: ~1,385 km diameter sphere",
+  "scene": "side-by-side",
+  "sources": [
+   "https://www.usgs.gov/media/images/all-earths-water-a-single-sphere"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 43,
+  "topic": "How long is a day on Venus?",
+  "hook": "A day on Venus lasts longer than its year.",
+  "payoff": "One spin takes 243 Earth days; one orbit 225.",
+  "numbers": "rotation 243 d; orbit 224.7 d",
+  "scene": "speed-bars",
+  "sources": [
+   "https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 44,
+  "topic": "How long would it take to drive to the Moon?",
+  "hook": "Could you drive to the Moon?",
+  "payoff": "At 100 km/h, nonstop, about 160 days.",
+  "numbers": "384,400 km / 100 km/h = 3,844 h",
+  "scene": "speed-bars",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lunar_distance"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 45,
+  "topic": "How long would it take to drive to the Sun?",
+  "hook": "Now drive to the Sun.",
+  "payoff": "At 100 km/h it would take about 170 years.",
+  "numbers": "149.6 million km / 100 km/h",
+  "scene": "speed-bars",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Astronomical_unit"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 46,
+  "topic": "How long would it take to walk around Earth?",
+  "hook": "Walk around the equator without stopping.",
+  "payoff": "About 334 days — almost a year.",
+  "numbers": "40,075 km at 5 km/h",
+  "scene": "speed-bars",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Earth"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 47,
+  "topic": "How long to fall through the Earth?",
+  "hook": "Dig a tunnel straight through the Earth and jump.",
+  "payoff": "You'd pop out the other side in about 42 minutes.",
+  "numbers": "idealised gravity tunnel ≈ 42 min",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Gravity_train"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 48,
+  "topic": "How big is Earth's core?",
+  "hook": "Deep under your feet is a ball of metal.",
+  "payoff": "The inner core is about 70% as wide as the Moon.",
+  "numbers": "inner core ~2,440 km wide; Moon 3,474 km",
+  "scene": "side-by-side",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Earth%27s_inner_core"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 49,
+  "topic": "How many Moons fit inside Earth?",
+  "hook": "The Moon looks big in the sky.",
+  "payoff": "About 50 Moons would fit inside Earth.",
+  "numbers": "volume ratio ≈ 49",
+  "scene": "fill-count",
+  "sources": [
+   "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 50,
+  "topic": "How big is Mercury?",
+  "hook": "Mercury is a planet. The Moon isn't.",
+  "payoff": "Yet Mercury is only about 40% wider than the Moon.",
+  "numbers": "Mercury 4,879 km; Moon 3,474 km",
+  "scene": "side-by-side",
+  "sources": [
+   "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 51,
+  "topic": "How many neurons are in your brain?",
+  "hook": "Your brain has about 86 billion neurons.",
+  "payoff": "That's more than 10 for every person on Earth.",
+  "numbers": "~86 billion neurons",
+  "scene": "fill-count",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Neuron"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 52,
+  "topic": "How big is a red blood cell?",
+  "hook": "You have about 25 trillion red blood cells.",
+  "payoff": "Each one is only ~0.0075 mm wide — 130 across a pinhead.",
+  "numbers": "~7.5 µm; pinhead ~1 mm",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Red_blood_cell"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 53,
+  "topic": "How small is a tardigrade?",
+  "hook": "The toughest animal on Earth is barely visible.",
+  "payoff": "A tardigrade is about half a millimetre long.",
+  "numbers": "~0.5 mm",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Tardigrade"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 54,
+  "topic": "How big is the biggest hailstone?",
+  "hook": "Hail is usually pea-sized.",
+  "payoff": "The record US hailstone was 20 cm across — a volleyball.",
+  "numbers": "Vivian, South Dakota, 2010: 8 in (20 cm)",
+  "scene": "side-by-side",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hail"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 55,
+  "topic": "How big is the Grand Canyon?",
+  "hook": "The Grand Canyon is 446 km long.",
+  "payoff": "And up to 1.8 km deep — over four Empire State Buildings.",
+  "numbers": "446 km long; ~1.8 km deep; ESB 443 m",
+  "scene": "stack-gap",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Grand_Canyon"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 56,
+  "topic": "How tall is Mount Everest compared to Earth?",
+  "hook": "Everest is the tallest mountain on Earth.",
+  "payoff": "On a basketball-sized Earth it would be 0.2 mm high.",
+  "numbers": "8,849 m vs 12,742 km; ball 24 cm",
+  "scene": "analogy-scale",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mount_Everest"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 57,
+  "topic": "How far away is Mars?",
+  "hook": "Mars is our neighbour.",
+  "payoff": "Even at its closest, it's about 140 times farther than the Moon.",
+  "numbers": "closest ~54.6 million km; Moon 384,400 km",
+  "scene": "stack-gap",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mars"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 58,
+  "topic": "How big is the Sun in the sky vs your thumb?",
+  "hook": "Hold your thumb out at arm's length.",
+  "payoff": "Your thumbnail can hide the whole Sun — and the Moon.",
+  "numbers": "Sun & Moon ~0.5°; thumb ~2°",
+  "scene": "analogy-scale",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Angular_diameter"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 59,
+  "topic": "How big is the Andromeda galaxy in our sky?",
+  "hook": "There's a galaxy in our sky bigger than the Moon.",
+  "payoff": "Andromeda is about 6 Moons wide — just too faint to see.",
+  "numbers": "~3° across; Moon ~0.5°",
+  "scene": "side-by-side",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Andromeda_Galaxy"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 60,
+  "topic": "How big is Betelgeuse?",
+  "hook": "Betelgeuse is the red star in Orion's shoulder.",
+  "payoff": "In the Sun's place it would reach past Mars.",
+  "numbers": "~640–760 solar radii (estimates vary)",
+  "scene": "grow-swallow",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Betelgeuse"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 61,
+  "topic": "How big is the Earth's shadow?",
+  "hook": "Every lunar eclipse shows you Earth's shadow.",
+  "payoff": "The shadow on the Moon is about 2.6 Moons wide.",
+  "numbers": "umbra at Moon ~9,200 km",
+  "scene": "side-by-side",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lunar_eclipse"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 62,
+  "topic": "How long is the equator?",
+  "hook": "Walk the whole equator.",
+  "payoff": "40,075 km — driving nonstop at 100 km/h takes about 17 days.",
+  "numbers": "40,075 km / 100 km/h ≈ 400 h",
+  "scene": "zoom-out",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Equator"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 63,
+  "topic": "How big is a grain of sand?",
+  "hook": "A grain of sand is tiny.",
+  "payoff": "But it holds roughly 40 quintillion atoms.",
+  "numbers": "1 mm quartz grain ≈ 1.4 mg SiO2 ≈ 4e19 atoms (order of magnitude)",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sand"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 64,
+  "topic": "How far away is the edge of the observable universe?",
+  "hook": "You can only see so far into space.",
+  "payoff": "About 46 billion light-years in every direction.",
+  "numbers": "radius ~46.5 billion ly",
+  "scene": "zoom-out",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Observable_universe"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 65,
+  "topic": "How many stars are in the Milky Way?",
+  "hook": "Count every star in our galaxy.",
+  "payoff": "Around 100 to 400 billion.",
+  "numbers": "estimates 100–400 billion",
+  "scene": "fill-count",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Milky_Way"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 66,
+  "topic": "How big is Ganymede?",
+  "hook": "The biggest moon in the Solar System is a giant.",
+  "payoff": "Ganymede is bigger than the planet Mercury.",
+  "numbers": "Ganymede 5,268 km; Mercury 4,879 km",
+  "scene": "side-by-side",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ganymede_(moon)"
+  ],
+  "status": "planned"
+ },
+ {
+  "n": 67,
+  "topic": "How small is a bacterium?",
+  "hook": "Your hands are covered in life you can't see.",
+  "payoff": "A typical bacterium is 1–2 µm — about 500 fit across a pinhead.",
+  "numbers": "~1–2 µm",
+  "scene": "zoom-in",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bacteria"
+  ],
+  "status": "planned"
+ }
+]
