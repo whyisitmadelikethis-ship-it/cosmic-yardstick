@@ -28,7 +28,7 @@ const CFG = {
   BACKUP_FOLDER_NAME: 'The Cosmic Yardstick — YouTube uploads',
   SHEET_ID: '1OSPZ9HufP6M_ywcPMcsD5NPjmat4es9M2YAo-6oenR0',   // "The Cosmic Yardstick – Tracker" (shared with this account)
   SHEET_TAB: 'Videos',
-  SCOPES: 'https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly',
+  SCOPES: 'https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtube.force-ssl',   // force-ssl: edit details + post comments
 };
 // Videos tab columns (1-based)
 const COL = { ID: 1, STATUS: 2, TOPIC: 3, TITLE: 4, ET: 5, IST: 6, LEN: 7, LINK: 8, VID: 9, VIEWS: 10, LIKES: 11, COMMENTS: 12, QUEUED: 13, UPLOADED: 14, DRIVE: 15, NOTES: 16 };
@@ -146,13 +146,13 @@ function processQueue() {
     if (branches.length) {
       try { assertChannel_(); }
       catch (e) { Logger.log(e.message); branches.forEach(b => noteInSheet_(b.substring(CFG.QUEUE_PREFIX.length), 'upload blocked', e.message)); return; }
-      applyPendingThumbnails_();
+      applyPendingThumbnails_(); applyPendingComments_();
       for (const b of branches) {
         if (Date.now() - started > CFG.TIME_BUDGET_MS) { Logger.log('Time budget used; the rest waits for the next run.'); break; }
         processOne_(b);
       }
     } else {
-      applyPendingThumbnails_();
+      applyPendingThumbnails_(); applyPendingComments_();
     }
     try { syncStats(); } catch (e) { Logger.log('Stats sync failed: ' + e.message); }
   } finally { lock.releaseLock(); }
@@ -191,8 +191,8 @@ function processOne_(branch) {
 
 function uploadAndSchedule_(id, meta) {
   const notes = [];
-  let videoId = findUploadedByTitle_(meta.title), publishAt, video = null;
-  if (videoId) notes.push('already on YouTube (reused existing upload)');
+  let videoId = uploadedById_(id) || findUploadedByTitle_(meta.title), publishAt, video = null;
+  if (videoId) { notes.push('already on YouTube (reused existing upload)'); ytUpdateDetails_(videoId, meta); notes.push('title/description/tags updated'); }
   else {
     publishAt = pickSlot_(meta.slot);
     if (publishAt.getTime() !== new Date(meta.slot).getTime()) notes.push('planned slot had passed or was taken; moved to the next free day');
@@ -216,6 +216,7 @@ function uploadAndSchedule_(id, meta) {
     if (thumbBlob) driveThumbId = folder.createFile(thumbBlob.setName(meta.thumbnail)).getId();
   } catch (e) { notes.push('Drive backup failed: ' + String(e.message).slice(0, 160)); }
   if (driveThumbId) addPendingThumbnail_(videoId, driveThumbId);
+  if (meta.comment) { const m = pendingComments_(); m[videoId] = { text: meta.comment, tries: 0 }; PROPS.setProperty('pendingComments', JSON.stringify(m)); notes.push('first comment waits until the video is public'); }
   if (/not set/.test(thumbnail)) notes.push('thumbnail ' + thumbnail + ' (will retry; custom thumbnails need a phone-verified channel)');
   return {
     id: id, status: st.privacyStatus === 'public' ? 'public' : 'scheduled', youtubeId: videoId, url: 'https://youtube.com/shorts/' + videoId,
@@ -303,6 +304,32 @@ function ytSetThumbnail_(videoId, blob) {
   const r = UrlFetchApp.fetch('https://www.googleapis.com/upload/youtube/v3/thumbnails/set?uploadType=media&videoId=' + videoId, {
     method: 'post', muteHttpExceptions: true, contentType: 'image/jpeg', payload: blob.getBytes(), headers: { Authorization: 'Bearer ' + ytToken_() } });
   if (r.getResponseCode() >= 300) throw new Error(r.getResponseCode() + ': ' + r.getContentText().slice(0, 200));
+}
+
+// The video uploaded earlier for this ID (from upload-results/<ID>.json on main), so a re-queue with a new title updates it instead of uploading twice.
+function uploadedById_(id) {
+  try { const r = JSON.parse(ghRawText_(CFG.RESULTS_DIR + '/' + id + '.json', CFG.MAIN)); return r.youtubeId || null; } catch (e) { return null; }
+}
+function ytUpdateDetails_(videoId, meta) {
+  const cur = ytJson_('get', 'videos?part=snippet&id=' + videoId).items[0].snippet;
+  ytJson_('put', 'videos?part=snippet', { id: videoId, snippet: { title: meta.title, description: meta.description || '', tags: meta.tags || [],
+    categoryId: String(meta.categoryId || cur.categoryId || '27'), defaultLanguage: cur.defaultLanguage || 'en', defaultAudioLanguage: cur.defaultAudioLanguage || 'en' } });
+}
+// First comment from the channel, posted once the video is public (YouTube's API cannot pin it; pin it in the app if you want).
+function pendingComments_() { return JSON.parse(PROPS.getProperty('pendingComments') || '{}'); }
+function applyPendingComments_() {
+  const m = pendingComments_();
+  Object.keys(m).forEach(vid => {
+    const it = m[vid];
+    try {
+      const x = (ytJson_('get', 'videos?part=status&id=' + vid).items || [])[0];
+      if (!x) { delete m[vid]; return; }
+      if (x.status.privacyStatus !== 'public') return;   // still scheduled: try next hour
+      ytJson_('post', 'commentThreads?part=snippet', { snippet: { videoId: vid, topLevelComment: { snippet: { textOriginal: it.text } } } });
+      delete m[vid]; Logger.log('Comment posted on ' + vid);
+    } catch (e) { Logger.log('Comment ' + vid + ': ' + e.message); if (++it.tries > 48) delete m[vid]; }
+  });
+  PROPS.setProperty('pendingComments', JSON.stringify(m));
 }
 
 function findUploadedByTitle_(title) {

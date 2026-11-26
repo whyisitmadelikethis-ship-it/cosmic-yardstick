@@ -40,6 +40,7 @@ def main():
     ap.add_argument("--category", default="27", help='e.g. "Education (27)" or "27"')
     ap.add_argument("--slot-et", required=True, help='"YYYY-MM-DD HH:MM" US Eastern')
     ap.add_argument("--topic", default="")
+    ap.add_argument("--comment", default="", help="first comment the uploader posts once the video is public")
     ap.add_argument("--length", default="")
     ap.add_argument("--test", action="store_true", help="mark as test: the uploader deletes it without uploading")
     a = ap.parse_args()
@@ -61,7 +62,7 @@ def main():
         "id": a.id, "topic": a.topic, "title": a.title, "description": a.description,
         "tags": [t.strip() for t in a.tags.split(",") if t.strip()],
         "categoryId": cat, "slot": slot.isoformat(), "lengthSeconds": a.length,
-        "video": video_name, "thumbnail": thumb_name,
+        "video": video_name, "thumbnail": thumb_name, "comment": a.comment,
         "slotIST": slot.astimezone(IST).strftime("%Y-%m-%d %H:%M"),
         "queuedAt": datetime.now(IST).strftime("%Y-%m-%d %H:%M"),
     }
