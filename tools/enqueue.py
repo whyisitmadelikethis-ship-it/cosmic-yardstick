@@ -5,12 +5,12 @@ Pushes ONE orphan branch  queue/<ID>  to cosmic-yardstick containing:
     meta.json, <video>.mp4, <thumbnail>.jpg (optional)
 The Apps Script picks it up within the hour, schedules it on YouTube, writes
 upload-results/<ID>.json on main and deletes the branch. main is never touched here.
-The slot is given in US Eastern time (the channel posts at 19:00 ET); daylight saving is handled.
+The slot is given in India time with --slot-ist (the channel posts at 17:30 IST), or in US Eastern with --slot-et.
 
 Example:
   python3 tools/enqueue.py --id 2026-11-27 --video renders/x.mp4 --thumb x-thumbnail.jpg \
     --title "Why ...? #shorts" --description "..." --tags "a, b, c" --category "Education (27)" \
-    --slot-et "2026-11-27 19:00" --topic "Why ..." --length 34.6
+    --slot-ist "2026-12-02 17:30" --topic "Why ..." --length 34.6
 Prints one JSON line: {"ok": true, "branch": ..., "sha": ...} or {"ok": false, "error": ...}
 """
 import argparse, json, os, re, shutil, subprocess, sys, tempfile, time
@@ -38,7 +38,8 @@ def main():
     ap.add_argument("--description", default="")
     ap.add_argument("--tags", default="", help="comma separated")
     ap.add_argument("--category", default="27", help='e.g. "Education (27)" or "27"')
-    ap.add_argument("--slot-et", required=True, help='"YYYY-MM-DD HH:MM" US Eastern')
+    ap.add_argument("--slot-ist", help='"YYYY-MM-DD HH:MM" India time (the channel posts at 17:30 IST)')
+    ap.add_argument("--slot-et", help='"YYYY-MM-DD HH:MM" US Eastern (alternative to --slot-ist)')
     ap.add_argument("--topic", default="")
     ap.add_argument("--length", default="")
     ap.add_argument("--test", action="store_true", help="mark as test: the uploader deletes it without uploading")
@@ -53,7 +54,9 @@ def main():
         raise SystemExit(json.dumps({"ok": False, "error": f"video is {size_mb:.1f} MB; the uploader limit is 45 MB — re-encode smaller"}))
     m = re.search(r"\d+", a.category)
     cat = m.group(0) if m else "27"
-    slot = datetime.strptime(a.slot_et.strip()[:16], "%Y-%m-%d %H:%M").replace(tzinfo=ET)
+    if not (a.slot_ist or a.slot_et): raise SystemExit(json.dumps({"ok": False, "error": "give --slot-ist (or --slot-et)"}))
+    slot = (datetime.strptime(a.slot_ist.strip()[:16], "%Y-%m-%d %H:%M").replace(tzinfo=IST) if a.slot_ist
+            else datetime.strptime(a.slot_et.strip()[:16], "%Y-%m-%d %H:%M").replace(tzinfo=ET))
 
     video_name = os.path.basename(a.video)
     thumb_name = os.path.basename(a.thumb) if a.thumb and os.path.isfile(a.thumb) else None

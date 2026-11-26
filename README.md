@@ -1,6 +1,6 @@
 # The Cosmic Yardstick — automated Shorts
 
-One true-scale science Short a day, made entirely in code and posted at **19:00 US Eastern**.
+One true-scale science Short a day, made entirely in code and posted at **17:30 IST** (7:00 am US Eastern).
 
 ```
 daily scheduled task (Claude, cloud)                Google Apps Script (channel's Google account, hourly)

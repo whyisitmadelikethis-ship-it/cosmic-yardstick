@@ -17,7 +17,7 @@ tools/py tools/mix.py work/<ID> <mood>                # music + effects + voice 
 tools/finish.sh work/<ID> <slug>                      # → work/<ID>/final/<slug>.mp4 (+ outro, −14 LUFS); prints JSON, ok must be true
 node tools/render.mjs frame work/<ID>/web work/<ID>/final/<slug>-thumbnail.jpg 0 "thumb=<t>&l1=<LINE 1>&l2=<LINE 2>&teaser=<TEASER>"
 python3 tools/enqueue.py --id <ID> --video ... --thumb ... --title ... --description ... --tags ... \
-   --category "Education (27)" --slot-et "<YYYY-MM-DD> 19:00" --topic ... --length <total s>
+   --category "Education (27)" --slot-ist "<YYYY-MM-DD> 17:30" --topic ... --length <total s>
 ```
 Examples to start from (engine/examples/): `atom-30s` is a full-length (28 s) Short already built to this guide —
 hook card, zoom counter, safe zones, events — use it as the reference for structure. `atom` zoom-in through levels · `moon` stack things in a gap ·
@@ -78,4 +78,4 @@ Fix and re-render the sheet until clean. Then after finish.sh, pull 6 frames fro
 - **Category:** Education (27). Not made for kids.
 - **Thumbnail:** `render.mjs frame … "thumb=<t>&l1=..&l2=..&teaser=.."` at the payoff moment; 2 short lines (question; last line yellow),
   teaser 2–3 words in capitals that doesn't give the answer away ("NOT EVEN CLOSE"). Look at it; pick another t if the overlay hides the key object.
-- Post slot: **19:00 US Eastern** on the day the run starts (05:30 IST next morning) — `--slot-et "<ET date> 19:00"`.
+- Post slot: **17:30 IST** on the day the run starts — `--slot-ist "<IST date> 17:30"`.

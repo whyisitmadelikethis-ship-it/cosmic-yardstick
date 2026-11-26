@@ -5,7 +5,7 @@
  *   1. lists GitHub branches named queue/<ID> in whyisitmadelikethis-ship-it/cosmic-yardstick
  *      (each one is pushed by the daily generation job and holds meta.json + the .mp4 + the thumbnail),
  *   2. CHECKS that it is signed in to the channel "The Cosmic Yardstick" (stops and uploads nothing otherwise),
- *   3. uploads the video, scheduled for its slot (19:00 US Eastern; the next free day if that has passed),
+ *   3. uploads the video, scheduled for its slot (17:30 IST; the next free day if that has passed),
  *   4. sets the thumbnail, keeps a backup copy of both files in Google Drive,
  *   5. fills in the video's row in the tracker sheet, writes upload-results/<ID>.json on main, deletes the branch,
  *   6. refreshes views / likes / comments / status for every video in the sheet.
@@ -21,7 +21,7 @@ const CFG = {
   QUEUE_PREFIX: 'queue/',
   RESULTS_DIR: 'upload-results',
   CHANNEL_TITLE: 'The Cosmic Yardstick',       // the only channel this script will ever upload to
-  POST_TIME_ET: '19:00',                        // daily post time, US Eastern (05:30 IST in winter, 04:30 IST in summer)
+  POST_TIME_IST: '17:30',                       // daily post time, India (07:00 US Eastern in winter, 08:00 in summer)
   MIN_LEAD_MINUTES: 30,
   MAX_ATTEMPTS: 3,
   TIME_BUDGET_MS: 4.5 * 60 * 1000,
@@ -247,24 +247,21 @@ function applyPendingThumbnails_() {
 }
 
 /* ------------------------------------------------------------------ */
-/* Slots: 19:00 US Eastern every day (daylight saving handled)          */
+/* Slots: 17:30 IST every day (one Short a day)                         */
 /* ------------------------------------------------------------------ */
 
-function etAt_(ymd, hm) {   // "2026-11-27", "19:00" → Date at that New York wall-clock time
-  const guess = new Date(ymd + 'T' + hm + ':00Z');
-  const off = Utilities.formatDate(guess, 'America/New_York', 'XXX');          // e.g. -05:00
-  return new Date(ymd + 'T' + hm + ':00' + off);
-}
+function istAt_(ymd, hm) { return new Date(ymd + 'T' + hm + ':00+05:30'); }   // India has no daylight saving
 function takenSlots_() { const now = Date.now(); const l = JSON.parse(PROPS.getProperty('takenSlots') || '[]').filter(t => t > now); PROPS.setProperty('takenSlots', JSON.stringify(l)); return l; }
 function reserveSlot_(d) { const l = takenSlots_(); l.push(d.getTime()); PROPS.setProperty('takenSlots', JSON.stringify(l)); }
+function dayIST_(t) { return Utilities.formatDate(new Date(t), 'Asia/Calcutta', 'yyyy-MM-dd'); }
 function pickSlot_(planned) {
-  const earliest = Date.now() + CFG.MIN_LEAD_MINUTES * 60000, taken = takenSlots_();
+  const earliest = Date.now() + CFG.MIN_LEAD_MINUTES * 60000, taken = takenSlots_(), takenDays = taken.map(dayIST_);
   const p = new Date(planned).getTime();
-  if (!isNaN(p) && p >= earliest && taken.indexOf(p) === -1) return new Date(p);
+  if (!isNaN(p) && p >= earliest && takenDays.indexOf(dayIST_(p)) === -1) return new Date(p);
   for (let day = 0; day < 60; day++) {
-    const ymd = Utilities.formatDate(new Date(Date.now() + day * 86400000), 'America/New_York', 'yyyy-MM-dd');
-    const t = etAt_(ymd, CFG.POST_TIME_ET).getTime();
-    if (t >= earliest && taken.indexOf(t) === -1) return new Date(t);
+    const ymd = Utilities.formatDate(new Date(Date.now() + day * 86400000), 'Asia/Calcutta', 'yyyy-MM-dd');
+    const t = istAt_(ymd, CFG.POST_TIME_IST).getTime();
+    if (t >= earliest && takenDays.indexOf(ymd) === -1) return new Date(t);
   }
   throw new Error('No free slot in the next 60 days.');
 }
