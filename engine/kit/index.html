@@ -12,5 +12,6 @@ if (q.has('thumb')) {            // ?thumb=<t>&l1=..&l2=..&teaser=..  -> one fra
   const tt = +q.get('thumb'), lines = [q.get('l1'), q.get('l2')].filter(Boolean);
   render = () => { window.NO_SUBS = true; S.render(tt); K.thumbOverlay(lines, q.get('teaser')); };
 }
+if (q.has('poster')) { const { poster } = await import('./poster.js'); render = () => poster(K); }
 await K.boot(render, T, S.ev);
 </script></body></html>
